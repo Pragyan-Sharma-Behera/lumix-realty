@@ -110,7 +110,7 @@ export default function Hero({ onConsult }) {
               [Years licensed]
             </p>
             <p className="display-thin mt-[clamp(8px,1.6vh,16px)] text-[clamp(1.2rem,min(3.1vw,4.3vh),2.6rem)] text-white">
-              <span className="block sm:pl-[3.2em]">Helping you</span>
+              <span className="block">Helping you</span>
               <span className="block">find your</span>
               <span className="block">Dubai home</span>
             </p>
