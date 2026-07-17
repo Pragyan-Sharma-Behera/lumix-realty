@@ -1,4 +1,4 @@
-# Design System: Kat | Dacha Real Estate
+# Design System: Kat Beaton | Dacha Real Estate
 
 ## 1. Visual Theme & Atmosphere
 
@@ -77,10 +77,10 @@ Non-obvious constraints, all of them learned by measuring the render rather than
 
 ## 9. Data Honesty
 
-This project changed category partway through: it started as a fictional Spanish developer, then was rebranded for a real person (Kat) and a real agency (Dacha Real Estate). That change matters more than it sounds — fabricating a number for a made-up developer is harmless texture; fabricating the same kind of number under a real name is misrepresentation. The rules below are what changed as a result.
+This project changed category partway through: it started as a fictional Spanish developer, then was rebranded for a real person (Kat Beaton) and a real agency (Dacha Real Estate). That change matters more than it sounds — fabricating a number for a made-up developer is harmless texture; fabricating the same kind of number under a real name is misrepresentation. The rules below are what changed as a result.
 
-- **No invented figure is attributed to Kat or Dacha.** Anywhere the old developer version had a specific number carrying no real source (years on market, properties sold, client count, license number), this version has a literal bracketed placeholder — `[Years licensed]`, `[X]+`, `[Add Kat's BRN / license number here]` — instead of a plausible-looking substitute. Search the codebase for `[` to find every open item before this goes live.
+- **No invented figure is attributed to Kat Beaton or Dacha.** Anywhere the old developer version had a specific number carrying no real source (years on market, properties sold, client count, license number), this version has a literal bracketed placeholder — `[Years licensed]`, `[X]+`, `[Add Kat Beaton's BRN / license number here]` — instead of a plausible-looking substitute. Search the codebase for `[` to find every open item before this goes live.
 - **Two things are real, not fabricated, and are stated as such:** the AED–USD conversion uses the dirham's actual fixed peg (3.6725 AED = 1 USD), and the escrow/RERA/DLD regulatory language describes Dubai's actual off-plan framework in general terms — not a claim about a specific project or license.
-- **The 8 listings are structurally real but substantively placeholder.** Locations (Palm Jumeirah, Dubai Marina, Downtown Dubai, Business Bay, Dubai Hills Estate, JVC, Al Marjan Island, Mina Al Arab) are real Dubai/RAK districts; the specific units, prices, and features attached to them are invented and must be replaced with Kat's actual inventory before publishing anywhere real.
-- **Testimonials are placeholder quotes**, not real client feedback — Kat's IG "Reviews" highlight has the real ones; nobody fetched them for this build (no browser/Instagram access in-session).
+- **The 8 listings are structurally real but substantively placeholder.** Locations (Palm Jumeirah, Dubai Marina, Downtown Dubai, Business Bay, Dubai Hills Estate, JVC, Al Marjan Island, Mina Al Arab) are real Dubai/RAK districts; the specific units, prices, and features attached to them are invented and must be replaced with Kat Beaton's actual inventory before publishing anywhere real.
+- **Testimonials are placeholder quotes**, not real client feedback — Kat Beaton's IG "Reviews" highlight has the real ones; nobody fetched them for this build (no browser/Instagram access in-session).
 - **Photography is a known, deliberate mismatch.** The stock photos are Mediterranean villas carried over from the original draft — nobody has yet sourced Dubai/RAK-appropriate imagery. Alt text describes what the photo actually shows (a white villa, a hillside pool) rather than pretending it's a Dubai property, so accessibility text stays honest even while the pairing is wrong. Replace before shipping.

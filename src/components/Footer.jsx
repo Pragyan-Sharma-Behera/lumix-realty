@@ -59,12 +59,12 @@ export default function Footer({ onConsult }) {
         <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-white/15 pt-6">
           <span className="flex items-center gap-2.5 font-display text-[15px] font-bold tracking-[-0.02em] text-white">
             <Mark />
-            KAT | DACHA REAL ESTATE
+            KAT BEATON | DACHA REAL ESTATE
           </span>
           <p className="max-w-[52ch] text-[12px] leading-[1.5] text-white/60">
-            Website concept prepared for Kat | Dacha Real Estate. Listings, figures and
-            testimonials shown are placeholder content pending confirmed details — not a
-            record of actual inventory, license status or client history.
+            Website concept prepared for Kat Beaton | Dacha Real Estate. Listings, figures
+            and testimonials shown are placeholder content pending confirmed details — not
+            a record of actual inventory, license status or client history.
           </p>
         </div>
       </div>

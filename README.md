@@ -1,6 +1,6 @@
-# Kat | Dacha Real Estate
+# Kat Beaton | Dacha Real Estate
 
-A concept site for a real agent (Kat) at a real agency (Dacha Real Estate), Dubai and Ras Al Khaimah. **Not yet live-ready** — see "What's still placeholder" below before showing this to anyone as finished.
+A concept site for a real agent (Kat Beaton) at a real agency (Dacha Real Estate), Dubai and Ras Al Khaimah. **Not yet live-ready** — see "What's still placeholder" below before showing this to anyone as finished.
 
 ```bash
 npm install

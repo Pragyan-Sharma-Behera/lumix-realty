@@ -1,4 +1,4 @@
-// PLACEHOLDER CONTENT — prepared for a real client (Kat | Dacha Real Estate)
+// PLACEHOLDER CONTENT — prepared for a real client (Kat Beaton | Dacha Real Estate)
 // but not yet backed by her real inventory. Every listing below, every price,
 // and every feature bullet is fictional placeholder data written to hold the
 // site's structure until real Dubai/RAK listings are supplied. Swap this file

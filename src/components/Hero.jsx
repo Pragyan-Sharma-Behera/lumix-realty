@@ -69,7 +69,9 @@ export default function Hero({ onConsult }) {
           paddingBottom: 'clamp(20px, 3vh, 32px)',
         }}
       >
-        <div className="flex justify-end">
+        {/* Hidden below sm — a floating corner label competing with the nav
+            for attention was exactly the "visual noise" flagged on phone. */}
+        <div className="hidden justify-end sm:flex">
           {/* Verbatim from her IG bio line — not a paraphrase. */}
           <p className="flex items-start gap-3 text-right text-[11px] font-bold uppercase leading-[1.5] tracking-[0.12em] text-white/90">
             <Asterisk className="mt-[1px] shrink-0" />
@@ -82,19 +84,18 @@ export default function Hero({ onConsult }) {
         </div>
 
         <div className="mt-[clamp(4px,2vh,20px)]">
-          {/* Leads with her name, agency as the second, equally large word —
-              a compromise reading of "Kat | Dacha Real Estate": her name
-              first, the agency right behind it, not subordinated to a caption. */}
+          {/* Her name only, full — Dacha Real Estate moved to the caption
+              rather than sharing the giant wordmark. */}
           <h1 className="display-thin text-white">
             <span className="relative block text-[clamp(3rem,min(15.5vw,21vh),13rem)]">
               KAT
             </span>
             <span className="mt-[0.06em] block text-[clamp(3rem,min(15.5vw,21vh),13rem)] sm:pl-[0.16em] lg:pl-[0.3em]">
-              DACHA
+              BEATON
             </span>
           </h1>
           <p className="mt-[clamp(10px,2vh,20px)] text-[11px] font-bold uppercase tracking-[0.16em] text-white/85">
-            Real Estate — Dubai &amp; Ras Al Khaimah
+            Dacha Real Estate — Dubai &amp; Ras Al Khaimah
           </p>
         </div>
 
@@ -103,8 +104,9 @@ export default function Hero({ onConsult }) {
         <div className="mt-auto flex flex-wrap items-end justify-between gap-x-6 gap-y-6 pt-[clamp(20px,3vh,40px)]">
           <div>
             {/* Placeholder — not invented. Swap for Kat's real start date or
-                years licensed once confirmed. */}
-            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-white/75">
+                years licensed once confirmed. Hidden on phone: a minor detail
+                that was adding a line to an already-tall mobile stack. */}
+            <p className="hidden text-[11px] font-bold uppercase tracking-[0.16em] text-white/75 sm:block">
               [Years licensed]
             </p>
             <p className="display-thin mt-[clamp(8px,1.6vh,16px)] text-[clamp(1.2rem,min(3.1vw,4.3vh),2.6rem)] text-white">
@@ -118,7 +120,8 @@ export default function Hero({ onConsult }) {
               <span aria-hidden className="ml-1 h-2.5 w-2.5 rounded-full bg-ink" />
             </a>
 
-            <p className="mt-[clamp(16px,3.5vh,40px)] max-w-[34ch] text-[11px] font-bold uppercase leading-[1.6] tracking-[0.1em] text-white/85">
+            {/* Supplementary line, not core message — hidden on phone. */}
+            <p className="mt-[clamp(16px,3.5vh,40px)] hidden max-w-[34ch] text-[11px] font-bold uppercase leading-[1.6] tracking-[0.1em] text-white/85 sm:block">
               Independent guidance across Dubai's
               <br />
               off-plan and resale market.
@@ -141,10 +144,13 @@ export default function Hero({ onConsult }) {
                   <span className="sr-only">Get a consultation</span>
                 </button>
               </div>
-              <p className="mt-2 text-[13px] leading-[1.5] text-white/90">
+              <p className="mt-2 hidden text-[13px] leading-[1.5] text-white/90 sm:block">
                 Happy clients across Dubai and Ras Al Khaimah.
               </p>
-              <div className="mt-4 flex -space-x-2">
+              {/* Decorative avatar row — dropped on phone along with the
+                  sentence above it, so the card is a single clean stat there
+                  instead of four stacked elements. */}
+              <div className="mt-4 hidden -space-x-2 sm:flex">
                 {THUMBS.map((t) => (
                   <img
                     key={t}

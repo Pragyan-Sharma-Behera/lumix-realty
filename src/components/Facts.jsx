@@ -13,15 +13,15 @@ export default function Facts() {
     <section id="company" className="mx-auto max-w-[1400px] px-4 py-[clamp(4rem,9vw,7.5rem)] sm:px-6 lg:px-10">
       <div className="grid gap-8 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
         <Reveal as="h2" className="display text-[clamp(2rem,4.6vw,3.5rem)] text-ink">
-          Kat | Dacha Real Estate,
+          Kat Beaton | Dacha Real Estate,
           <br />
           in brief
         </Reveal>
         <Reveal delay={60} className="max-w-[52ch] self-end">
           <p className="text-[15px] leading-[1.65] text-muted">
-            Kat works across sales, rentals and off-plan investment in Dubai and Ras Al
-            Khaimah, backed by Dacha Real Estate. Every off-plan payment is held in a
-            DLD-regulated escrow account — never with the agent, and never in the
+            Kat Beaton works across sales, rentals and off-plan investment in Dubai and
+            Ras Al Khaimah, backed by Dacha Real Estate. Every off-plan payment is held
+            in a DLD-regulated escrow account — never with the agent, and never in the
             developer's general funds.
           </p>
         </Reveal>
@@ -35,8 +35,8 @@ export default function Facts() {
           <div className="mt-6">
             <p className="text-[15px] font-bold leading-[1.3] text-ink">Registered broker</p>
             <p className="mt-2 text-[13px] leading-[1.5] text-muted">
-              Licensed under Dubai's Real Estate Regulatory Agency. [Add Kat's BRN /
-              license number here.]
+              Licensed under Dubai's Real Estate Regulatory Agency. [Add Kat Beaton's
+              BRN / license number here.]
             </p>
           </div>
         </Reveal>
@@ -86,7 +86,7 @@ export default function Facts() {
           </p>
           <div className="mt-4">
             <p className="text-[15px] font-bold leading-[1.3] text-white">
-              Kat operates under Dacha Real Estate
+              Kat Beaton operates under Dacha Real Estate
             </p>
             <p className="mt-2 max-w-[46ch] text-[13px] leading-[1.5] text-white/80">
               Covering sales, rentals and off-plan investment across Dubai and Ras Al

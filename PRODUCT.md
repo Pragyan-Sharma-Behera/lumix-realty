@@ -6,11 +6,11 @@ brand
 
 ## Users
 
-International and local buyers, tenants and investors in Dubai and Ras Al Khaimah, working with an individual agent (Kat) operating under Dacha Real Estate — sales, rentals, and off-plan investment. Many are overseas and researching remotely, comparing agents before they've ever spoken to one. The category defaults to opaque pricing and pushy follow-up; the job to be done is deciding whether Kat is worth a conversation before handing over contact details.
+International and local buyers, tenants and investors in Dubai and Ras Al Khaimah, working with an individual agent (Kat Beaton) operating under Dacha Real Estate — sales, rentals, and off-plan investment. Many are overseas and researching remotely, comparing agents before they've ever spoken to one. The category defaults to opaque pricing and pushy follow-up; the job to be done is deciding whether Kat Beaton is worth a conversation before handing over contact details.
 
 ## Product Purpose
 
-This is a concept site for Kat | Dacha Real Estate — not yet backed by her real listings, license number, or client history. It exists to establish credibility and generate qualified consultation requests. Once real content replaces the placeholders (see Design Honesty in DESIGN.md), success is the same as any agent site: a consultation request from someone who already trusts the fundamentals.
+This is a concept site for Kat Beaton | Dacha Real Estate — not yet backed by her real listings, license number, or client history. It exists to establish credibility and generate qualified consultation requests. Once real content replaces the placeholders (see Design Honesty in DESIGN.md), success is the same as any agent site: a consultation request from someone who already trusts the fundamentals.
 
 ## Brand Personality
 

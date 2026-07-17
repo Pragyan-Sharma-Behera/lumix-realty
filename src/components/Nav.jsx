@@ -3,7 +3,7 @@ import { Mark, Menu, Close, Phone } from './icons';
 
 const LINKS = [
   { href: '#projects', label: 'Listings' },
-  { href: '#company', label: 'About Kat' },
+  { href: '#company', label: 'About Kat Beaton' },
   { href: '#process', label: 'How it works' },
   { href: '#guarantees', label: 'Trust & reviews' },
 ];
@@ -61,8 +61,9 @@ export default function Nav({ onConsult }) {
           }}
         />
 
-        {/* Leads with "Kat", agency named right beside it — she presents on IG
-            as an agent under Dacha, not a standalone "Kat Beaton Realty". */}
+        {/* Leads with her full name, agency named right beside it — she
+            presents on IG as an agent under Dacha, not a standalone
+            "Kat Beaton Realty". */}
         <a
           href="#top"
           className="relative flex items-baseline gap-2"
@@ -70,7 +71,7 @@ export default function Nav({ onConsult }) {
         >
           <Mark style={{ color: fg }} />
           <span className="font-display text-[17px] font-bold tracking-[-0.02em]" style={{ color: fg }}>
-            KAT
+            KAT BEATON
           </span>
           <span
             className="text-[10px] font-bold uppercase tracking-[0.08em]"

@@ -8,7 +8,7 @@ const ITEMS = [
   },
   {
     k: 'Licensed brokerage',
-    v: "Kat is a RERA-registered broker operating under Dacha Real Estate. [Add Kat's BRN / license number here.]",
+    v: "Kat Beaton is a RERA-registered broker operating under Dacha Real Estate. [Add Kat Beaton's BRN / license number here.]",
   },
   {
     k: 'Transparent fees',
@@ -25,7 +25,7 @@ const ITEMS = [
 // be mistaken for actual client feedback.
 const TESTIMONIALS = [
   {
-    quote: '[Pull a real quote from Kat\'s Reviews highlight here.]',
+    quote: '[Pull a real quote from Kat Beaton\'s Reviews highlight here.]',
     who: '[Client name], [off-plan buyer / tenant / seller]',
   },
   {
@@ -48,8 +48,8 @@ export default function Guarantees() {
           />
           <div className="p-6">
             <p className="prose-balance text-[14px] leading-[1.6] text-muted">
-              None of this is a sales pitch — ask Kat for the license number, the escrow
-              account details, or a past client to call directly.
+              None of this is a sales pitch — ask Kat Beaton for the license number, the
+              escrow account details, or a past client to call directly.
             </p>
           </div>
         </Reveal>

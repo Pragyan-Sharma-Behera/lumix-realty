@@ -7,7 +7,7 @@ const STEPS = [
   {
     n: '01',
     title: 'Consultation',
-    body: "Tell Kat your budget, timeline and must-haves — sales, rental or off-plan.",
+    body: "Tell Kat Beaton your budget, timeline and must-haves — sales, rental or off-plan.",
     img: IMG.villaWood,
     alt: 'A modern building with timber soffits beside a lit pool',
   },
