@@ -6,15 +6,15 @@ brand
 
 ## Users
 
-International buyers and investors — largely Northern European and UK — purchasing new-build residential property on the Spanish coast, usually remotely and usually without speaking to anyone in person first. They arrive skeptical: the category is full of opaque pricing, agents who won't quote a number, and "from €X" figures that move once you're invested. They are researching on a laptop, in the evening, comparing three or four developers at once. The job to be done: decide whether this developer is worth a conversation, and see a real price before giving up a phone number.
+International and local buyers, tenants and investors in Dubai and Ras Al Khaimah, working with an individual agent (Kat) operating under Dacha Real Estate — sales, rentals, and off-plan investment. Many are overseas and researching remotely, comparing agents before they've ever spoken to one. The category defaults to opaque pricing and pushy follow-up; the job to be done is deciding whether Kat is worth a conversation before handing over contact details.
 
 ## Product Purpose
 
-LUMIX Realty is a Spanish developer, not a listings portal. The site exists to convert skepticism into a consultation booking by doing the thing competitors won't: showing the price, the terms, and the construction stage up front. Success is a qualified consultation request from someone who already knows what a unit costs.
+This is a concept site for Kat | Dacha Real Estate — not yet backed by her real listings, license number, or client history. It exists to establish credibility and generate qualified consultation requests. Once real content replaces the placeholders (see Design Honesty in DESIGN.md), success is the same as any agent site: a consultation request from someone who already trusts the fundamentals.
 
 ## Brand Personality
 
-Precise, transparent, unhurried. The voice states figures plainly and never oversells — the confidence comes from disclosure, not adjectives. Emotionally the surface should feel like clear Mediterranean daylight: open, calm, nothing in shadow. Copy makes specific claims ("price fixed in the contract") over atmospheric ones ("bespoke coastal living").
+Approachable, direct, locally fluent. An individual agent's trustworthiness, backed by an established agency rather than a faceless developer. Copy states what's true plainly and marks clearly what isn't yet confirmed — confidence comes from disclosure, including disclosing what's still placeholder.
 
 ## Anti-references
 
@@ -24,11 +24,11 @@ Precise, transparent, unhurried. The voice states figures plainly and never over
 
 ## Design Principles
 
-1. **Show the number.** Any claim that could be a figure is a figure. Price, stage, m², year. Vagueness is the competitor's move.
-2. **Daylight, not shadow.** The reference board is nocturnal and dramatic; this brand inverts it. Brightness is the differentiator in a category that defaults to dark luxury.
+1. **Show the number where one is confirmed; mark clearly where it isn't.** This project inherited a "show the number" mandate from an earlier, fully-fictional developer version. Applied to a real person and a real agency, invented numbers stop being harmless placeholder texture and become misrepresentation. Every figure here is either real (the AED/USD peg, Dubai's escrow regulation) or a bracketed `[placeholder]` — never a specific invented number presented as fact.
+2. **Daylight, not shadow.** Brightness is the differentiator in a category that defaults to dark luxury.
 3. **Glass as atmosphere, not decoration.** Frost is used where content genuinely floats over photography. Never a glass card on a flat background.
-4. **Photography is the design.** The architecture sells the architecture. Typography frames it and gets out of the way.
-5. **Earn the form, then ask.** The consultation CTA appears after the price is visible, never before.
+4. **Photography is the design — with a known gap.** The current photography (Mediterranean villas) does not match the Dubai/RAK copy; this was a deliberate interim choice while rebranding, not an oversight. Replace before this goes live anywhere real.
+5. **Earn the form, then ask.** The consultation CTA appears after the value proposition is visible, never before.
 
 ## Accessibility & Inclusion
 

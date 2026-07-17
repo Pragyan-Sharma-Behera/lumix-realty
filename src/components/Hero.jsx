@@ -70,30 +70,31 @@ export default function Hero({ onConsult }) {
         }}
       >
         <div className="flex justify-end">
+          {/* Verbatim from her IG bio line — not a paraphrase. */}
           <p className="flex items-start gap-3 text-right text-[11px] font-bold uppercase leading-[1.5] tracking-[0.12em] text-white/90">
             <Asterisk className="mt-[1px] shrink-0" />
             <span>
-              We build on the
+              Sales • Rentals
               <br />
-              Spanish coast
+              Off-plan investments
             </span>
           </p>
         </div>
 
         <div className="mt-[clamp(4px,2vh,20px)]">
+          {/* Leads with her name, agency as the second, equally large word —
+              a compromise reading of "Kat | Dacha Real Estate": her name
+              first, the agency right behind it, not subordinated to a caption. */}
           <h1 className="display-thin text-white">
             <span className="relative block text-[clamp(3rem,min(15.5vw,21vh),13rem)]">
-              LUMIX
-              <span className="absolute -top-[0.1em] ml-[0.12em] text-[0.16em] font-normal tracking-normal">
-                ©
-              </span>
+              KAT
             </span>
             <span className="mt-[0.06em] block text-[clamp(3rem,min(15.5vw,21vh),13rem)] sm:pl-[0.16em] lg:pl-[0.3em]">
-              REALTY
+              DACHA
             </span>
           </h1>
           <p className="mt-[clamp(10px,2vh,20px)] text-[11px] font-bold uppercase tracking-[0.16em] text-white/85">
-            Property in the heart of Spain
+            Real Estate — Dubai &amp; Ras Al Khaimah
           </p>
         </div>
 
@@ -101,32 +102,36 @@ export default function Hero({ onConsult }) {
             per the reference. */}
         <div className="mt-auto flex flex-wrap items-end justify-between gap-x-6 gap-y-6 pt-[clamp(20px,3vh,40px)]">
           <div>
+            {/* Placeholder — not invented. Swap for Kat's real start date or
+                years licensed once confirmed. */}
             <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-white/75">
-              Est. 2014
+              [Years licensed]
             </p>
             <p className="display-thin mt-[clamp(8px,1.6vh,16px)] text-[clamp(1.2rem,min(3.1vw,4.3vh),2.6rem)] text-white">
-              <span className="block sm:pl-[3.2em]">Where</span>
-              <span className="block">clarity meets</span>
-              <span className="block">modern living</span>
+              <span className="block sm:pl-[3.2em]">Helping you</span>
+              <span className="block">find your</span>
+              <span className="block">Dubai home</span>
             </p>
 
             <a href="#projects" className="btn mt-[clamp(16px,3vh,28px)] bg-white text-ink">
-              <span className="uppercase tracking-[0.08em] text-[13px]">View projects</span>
+              <span className="uppercase tracking-[0.08em] text-[13px]">View listings</span>
               <span aria-hidden className="ml-1 h-2.5 w-2.5 rounded-full bg-ink" />
             </a>
 
             <p className="mt-[clamp(16px,3.5vh,40px)] max-w-[34ch] text-[11px] font-bold uppercase leading-[1.6] tracking-[0.1em] text-white/85">
-              Private homes surrounded by nature.
+              Independent guidance across Dubai's
               <br />
-              Forty minutes from Alicante airport.
+              off-plan and resale market.
             </p>
           </div>
 
           <div className="flex w-full justify-end sm:w-auto">
             {/* Glass earns its place: it floats over the photograph. */}
             <div className="glass-dark w-full max-w-[340px] rounded-2xl p-5">
+              {/* "[X]+" is a deliberate placeholder, not a typo — swap for a
+                  real client count once Kat confirms one. */}
               <div className="flex items-start justify-between gap-4">
-                <p className="nums display-thin text-[2.25rem] text-white">1,200+</p>
+                <p className="display-thin text-[2.25rem] text-white">[X]+</p>
                 <button
                   type="button"
                   onClick={() => onConsult()}
@@ -137,8 +142,7 @@ export default function Hero({ onConsult }) {
                 </button>
               </div>
               <p className="mt-2 text-[13px] leading-[1.5] text-white/90">
-                Families and investors have already settled with us across Alicante, Málaga
-                and Cádiz.
+                Happy clients across Dubai and Ras Al Khaimah.
               </p>
               <div className="mt-4 flex -space-x-2">
                 {THUMBS.map((t) => (

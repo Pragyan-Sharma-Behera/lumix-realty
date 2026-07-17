@@ -6,29 +6,29 @@ import { IMG, imgUrl } from '../data/properties';
 const STEPS = [
   {
     n: '01',
-    title: 'Property selection',
-    body: 'Choose the project and layout, and see the price and construction stage right away.',
+    title: 'Consultation',
+    body: "Tell Kat your budget, timeline and must-haves — sales, rental or off-plan.",
     img: IMG.villaWood,
-    alt: 'A modern villa with timber soffits beside a lit pool',
+    alt: 'A modern building with timber soffits beside a lit pool',
   },
   {
     n: '02',
-    title: 'Cost calculation',
-    body: 'A full written breakdown: unit price, taxes, notary, and what is not included.',
+    title: 'Curated shortlist',
+    body: 'A shortlist matched to your brief, with pricing and payment plans upfront.',
     img: IMG.houseCorten,
     alt: 'A weathered steel and white apartment block in sharp sunlight',
   },
   {
     n: '03',
-    title: 'Contract signing',
-    body: 'Completed with independent legal support and the price fixed against increases.',
+    title: 'Viewings & offer',
+    body: 'In person or virtual viewings, then a clear, no-pressure offer process.',
     img: IMG.houseDusk,
     alt: 'A dark-framed glazed pavilion lit from within at dusk',
   },
   {
     n: '04',
-    title: 'Construction and handover',
-    body: 'Monthly progress photography, then keys on the date written in the contract.',
+    title: 'Closing',
+    body: 'Independent legal support through transfer or lease signing, then keys on completion.',
     img: IMG.villaPalms,
     alt: 'A white villa framed by palms above a turquoise pool',
   },
@@ -36,29 +36,29 @@ const STEPS = [
 
 export default function Process({ onConsult }) {
   return (
-    <section id="pricing" className="mx-auto max-w-[1400px] px-4 py-[clamp(4rem,9vw,7.5rem)] sm:px-6 lg:px-10">
+    <section id="process" className="mx-auto max-w-[1400px] px-4 py-[clamp(4rem,9vw,7.5rem)] sm:px-6 lg:px-10">
       <div className="grid gap-10 lg:grid-cols-[1fr_0.85fr] lg:items-end lg:gap-16">
         <Reveal>
           <h2 className="display text-[clamp(2rem,4.6vw,3.5rem)] text-ink">
-            Transparent pricing
+            How it works,
             <br />
-            and clear purchase steps
+            start to finish
           </h2>
         </Reveal>
 
         <Reveal delay={60} className="card-raised overflow-hidden">
           <img
             src={imgUrl(IMG.villaPoolBright, 1000)}
-            alt="A bright white three-storey villa with a long pool and open sky"
+            alt="A bright white three-storey building with a long pool and open sky"
             loading="lazy"
             decoding="async"
             className="h-[220px] w-full object-cover sm:h-[280px]"
           />
           <div className="p-6">
-            <h3 className="text-[15px] font-bold text-ink">Four steps, no surprises</h3>
+            <h3 className="text-[15px] font-bold text-ink">Four steps, no pressure</h3>
             <p className="prose-balance mt-2 text-[14px] leading-[1.6] text-muted">
-              You will not be asked for a phone number to see a price, and nobody will call
-              you unless you ask them to.
+              You will not be chased for a decision, and every fee is explained before you
+              sign anything.
             </p>
           </div>
         </Reveal>

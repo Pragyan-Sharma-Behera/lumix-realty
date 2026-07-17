@@ -3,20 +3,34 @@ import { IMG, imgUrl } from '../data/properties';
 
 const ITEMS = [
   {
-    k: 'Bank-guaranteed deposits',
-    v: 'Every off-plan payment is held under a Spanish bank guarantee (aval bancario) and returned in full if we miss the licence or handover date.',
+    k: 'DLD-regulated escrow',
+    v: 'Off-plan payments are held in a Dubai Land Department–regulated escrow account, not by the agent or the developer directly — a legal requirement for every registered project in Dubai.',
   },
   {
-    k: 'Ten-year structural warranty',
-    v: 'The statutory decennial insurance, plus three years on waterproofing and one on finishes. Policy numbers are in the contract.',
+    k: 'Licensed brokerage',
+    v: "Kat is a RERA-registered broker operating under Dacha Real Estate. [Add Kat's BRN / license number here.]",
   },
   {
-    k: 'Fixed price at reservation',
-    v: 'Material costs are our problem, not yours. The figure on your reservation is the figure at completion.',
+    k: 'Transparent fees',
+    v: 'Commission, DLD transfer fees and any agency charges are itemised before you commit — nothing added after the fact.',
   },
   {
-    k: 'Independent legal review',
-    v: 'We will not complete unless your own lawyer has signed off. If you do not have one, we will give you three names and instruct none of them.',
+    k: 'Independent legal support',
+    v: "Conveyancing and contract review from an independent lawyer, not Dacha's in-house counsel — you choose who represents you.",
+  },
+];
+
+// Placeholder quotes only. Kat's IG "Reviews" highlight has real testimonials
+// this section should carry instead — these exist to hold the layout, not to
+// be mistaken for actual client feedback.
+const TESTIMONIALS = [
+  {
+    quote: '[Pull a real quote from Kat\'s Reviews highlight here.]',
+    who: '[Client name], [off-plan buyer / tenant / seller]',
+  },
+  {
+    quote: '[A second real quote goes here.]',
+    who: '[Client name], [off-plan buyer / tenant / seller]',
   },
 ];
 
@@ -34,15 +48,15 @@ export default function Guarantees() {
           />
           <div className="p-6">
             <p className="prose-balance text-[14px] leading-[1.6] text-muted">
-              Everything below is contractual, not a promise on a website. Ask for the draft
-              before you reserve and we will send it unredacted.
+              None of this is a sales pitch — ask Kat for the license number, the escrow
+              account details, or a past client to call directly.
             </p>
           </div>
         </Reveal>
 
         <div>
           <Reveal as="h2" className="display text-[clamp(2rem,4.6vw,3.5rem)] text-ink">
-            Guarantees
+            Trust &amp; reviews
           </Reveal>
 
           {/* A definition list, not a card grid — these are terms, not products. */}
@@ -59,6 +73,24 @@ export default function Guarantees() {
               </Reveal>
             ))}
           </dl>
+
+          <div className="mt-10 grid gap-3 sm:grid-cols-2">
+            {TESTIMONIALS.map((t, i) => (
+              <Reveal
+                key={i}
+                delay={200 + i * 50}
+                as="blockquote"
+                className="card p-5"
+              >
+                <p className="prose-balance text-[14px] italic leading-[1.6] text-muted">
+                  “{t.quote}”
+                </p>
+                <footer className="mt-3 text-[12px] font-bold uppercase tracking-[0.04em] text-ink">
+                  {t.who}
+                </footer>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>

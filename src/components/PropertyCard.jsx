@@ -1,11 +1,10 @@
 import { useState } from 'react';
-import { imgUrl, formatPrice } from '../data/properties';
+import { imgUrl, formatPrice, formatUsd } from '../data/properties';
 import { Bed, Bath, Area, Pin, ArrowRight } from './icons';
 
 const STAGE_STYLE = {
-  Completed: { bg: 'oklch(0.52 0.135 236)', fg: 'white' },
-  'Under construction': { bg: 'oklch(0.993 0.003 230)', fg: 'var(--color-ink)' },
-  Planning: { bg: 'oklch(0.993 0.003 230)', fg: 'var(--color-ink)' },
+  Ready: { bg: 'oklch(0.52 0.135 236)', fg: 'white' },
+  'Off-plan': { bg: 'oklch(0.993 0.003 230)', fg: 'var(--color-ink)' },
 };
 
 export default function PropertyCard({ property, onOpen }) {
@@ -40,7 +39,7 @@ export default function PropertyCard({ property, onOpen }) {
         <span
           className="glass absolute left-3 top-3 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-[0.04em]"
           style={
-            property.stage === 'Completed'
+            property.stage === 'Ready'
               ? { backgroundColor: stage.bg, color: stage.fg, borderColor: 'transparent' }
               : { color: 'var(--color-ink)' }
           }
@@ -62,8 +61,13 @@ export default function PropertyCard({ property, onOpen }) {
               </span>
             </p>
           </div>
-          <p className="nums shrink-0 text-right text-[17px] font-bold tracking-[-0.02em] text-ink">
-            {formatPrice(property.price)}
+          <p className="nums shrink-0 text-right">
+            <span className="block text-[17px] font-bold tracking-[-0.02em] text-ink">
+              {formatPrice(property.price)}
+            </span>
+            <span className="block text-[12px] font-bold text-muted">
+              ≈ {formatUsd(property.price)}
+            </span>
           </p>
         </div>
 

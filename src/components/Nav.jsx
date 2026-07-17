@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react';
 import { Mark, Menu, Close, Phone } from './icons';
 
 const LINKS = [
-  { href: '#projects', label: 'Our projects' },
-  { href: '#company', label: 'About us' },
-  { href: '#pricing', label: 'Price and terms' },
-  { href: '#guarantees', label: 'Guarantees' },
+  { href: '#projects', label: 'Listings' },
+  { href: '#company', label: 'About Kat' },
+  { href: '#process', label: 'How it works' },
+  { href: '#guarantees', label: 'Trust & reviews' },
 ];
 
-const TEL = '+34 900 000 000';
+const TEL = '+971 58 568 1911';
 
 export default function Nav({ onConsult }) {
   const [scrolled, setScrolled] = useState(false);
@@ -61,14 +61,24 @@ export default function Nav({ onConsult }) {
           }}
         />
 
+        {/* Leads with "Kat", agency named right beside it — she presents on IG
+            as an agent under Dacha, not a standalone "Kat Beaton Realty". */}
         <a
           href="#top"
-          className="relative flex items-center gap-2.5 font-display text-[17px] font-bold tracking-[-0.02em]"
-          style={{ color: fg, transition: 'color 200ms var(--ease-out)' }}
+          className="relative flex items-baseline gap-2"
+          style={{ transition: 'color 200ms var(--ease-out)' }}
         >
-          <Mark />
-          LUMIX
-          <span className="sr-only">Realty — back to top</span>
+          <Mark style={{ color: fg }} />
+          <span className="font-display text-[17px] font-bold tracking-[-0.02em]" style={{ color: fg }}>
+            KAT
+          </span>
+          <span
+            className="text-[10px] font-bold uppercase tracking-[0.08em]"
+            style={{ color: fgMuted }}
+          >
+            Dacha Real Estate
+          </span>
+          <span className="sr-only">— back to top</span>
         </a>
 
         {/* Centred link row, per the reference. */}
@@ -89,11 +99,14 @@ export default function Nav({ onConsult }) {
         </nav>
 
         <div className="relative ml-auto flex items-center gap-3">
+          {/* Language toggle intentionally English-only for now. Dubai's buyer
+              traffic skews heavily Russian-speaking, but adding RU is Kat's
+              call to make, not a guess to bake in here. */}
           <p
             className="hidden text-[13px] font-bold tracking-[0.04em] sm:block"
-            style={{ color: fgMuted, transition: 'color 200ms var(--ease-out)' }}
+            style={{ color: fg, transition: 'color 200ms var(--ease-out)' }}
           >
-            <span style={{ color: fg }}>EN</span> | ES
+            EN
           </p>
 
           <a href={`tel:${TEL.replace(/\s/g, '')}`} className="nav-cta btn btn-ghost !pr-1.5">

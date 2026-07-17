@@ -74,10 +74,10 @@ export default function Listings({ onOpen }) {
     >
       <div className="flex flex-wrap items-end justify-between gap-6">
         <Reveal>
-          <h2 className="display text-[clamp(2rem,4.6vw,3.5rem)] text-ink">Our projects</h2>
+          <h2 className="display text-[clamp(2rem,4.6vw,3.5rem)] text-ink">Listings</h2>
           <p className="mt-3 max-w-[46ch] text-[15px] leading-[1.6] text-muted">
-            Every unit we are currently selling, with its price and construction stage.
-            Nothing is held back behind a form.
+            Every unit currently available, with its price and stage. Nothing is held
+            back behind a form.
           </p>
         </Reveal>
 

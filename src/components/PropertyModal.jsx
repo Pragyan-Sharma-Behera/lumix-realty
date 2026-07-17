@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Modal from './Modal';
-import { imgUrl, formatPrice } from '../data/properties';
+import { imgUrl, formatPrice, formatUsd } from '../data/properties';
 import { Bed, Bath, Area, Pin, Check } from './icons';
 
 export default function PropertyModal({ property, onClose, onConsult }) {
@@ -69,6 +69,9 @@ export default function PropertyModal({ property, onClose, onConsult }) {
             <div className="text-right">
               <p className="nums display text-[clamp(1.5rem,2.8vw,2rem)] text-ink">
                 {formatPrice(property.price)}
+              </p>
+              <p className="nums mt-0.5 text-[13px] font-bold text-muted">
+                ≈ {formatUsd(property.price)}
               </p>
               <p className="mt-1 text-[12px] font-bold uppercase tracking-[0.04em] text-muted">
                 {property.handover}
