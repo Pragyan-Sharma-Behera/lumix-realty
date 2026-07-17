@@ -68,14 +68,13 @@ body {
   text-wrap: balance;
 }
 
-/* Hero-only display voice: Helvetica/Inter Bold per the client's type
-   reference, heavier than the 700 used for section headings elsewhere so the
-   hero wordmark reads as the loudest thing on the page. Kept as its own class
-   so it can't leak into section headings. */
+/* The hero reference uses a light, near-neutral-tracked grotesk at enormous
+   size — a different voice from the bold display used through the rest of the
+   page. Kept as its own class so it can't leak into section headings. */
 .display-thin {
   font-family: var(--font-display);
-  font-weight: 800;
-  letter-spacing: -0.02em;
+  font-weight: 300;
+  letter-spacing: -0.015em;
   line-height: 0.82;
   text-transform: uppercase;
 }
