@@ -1,0 +1,369 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-canvas: oklch(0.972 0.005 230);
+  --color-surface: oklch(0.993 0.003 230);
+  --color-ink: oklch(0.2 0.022 250);
+  --color-muted: oklch(0.474 0.02 250);
+  --color-faint: oklch(0.6 0.018 250);
+  --color-marine: oklch(0.52 0.135 236);
+  --color-marine-deep: oklch(0.44 0.13 238);
+  --color-hairline: oklch(0.88 0.008 230);
+  --color-deep: oklch(0.3 0.05 240);
+  /* Errors must not reuse the accent — marine reads as a link or a hint, not a
+     failure. Deep brick sits in the same cool-daylight world without neon.
+     6.05:1 on canvas, 6.55:1 for white text on it. */
+  --color-danger: oklch(0.5 0.17 25);
+
+  --font-display: 'Helvetica Neue', Helvetica, Inter, Arial, sans-serif;
+  --font-sans: 'Helvetica Neue', Helvetica, Inter, Arial, sans-serif;
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* Semantic z-index scale — never arbitrary values */
+:root {
+  --z-sticky: 100;
+  --z-dropdown: 200;
+  --z-backdrop: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Sticky nav is 72px; keep anchored sections clear of it */
+  scroll-padding-top: 5.5rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  /* Horizontal overflow at any width is a defect */
+  overflow-x: clip;
+}
+
+/* Tabular figures everywhere a number must align in a column */
+.nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- Display type ---------------------------------------------------- */
+/* Tracking floor is -0.04em; letters must never touch. */
+.display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 0.9;
+  text-wrap: balance;
+}
+
+/* The hero reference uses a light, near-neutral-tracked grotesk at enormous
+   size — a different voice from the bold display used through the rest of the
+   page. Kept as its own class so it can't leak into section headings. */
+.display-thin {
+  font-family: var(--font-display);
+  font-weight: 300;
+  letter-spacing: -0.015em;
+  line-height: 0.82;
+  text-transform: uppercase;
+}
+
+/* Both photo layers carry the same dim. An overlay alone left the villa
+   untouched wherever anything repainted above it, so the darkening lives on
+   the image itself. White type paints above and stays legible across the
+   whole hero without per-element shadow hacks: wordmark 7.85:1, subhead
+   15.90:1, footnote 9.23:1, card body 11.95:1 (measured against the render). */
+.hero-photo {
+  filter: brightness(0.78) saturate(0.95);
+}
+
+.prose-balance {
+  text-wrap: pretty;
+  max-width: 68ch;
+}
+
+/* ---- Glass ----------------------------------------------------------- */
+/* Frost on daylight. Only ever used over imagery — never on a flat bg. */
+.glass {
+  background-color: color-mix(in oklab, white 62%, transparent);
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  border: 1px solid color-mix(in oklab, white 55%, transparent);
+}
+
+/* For frost that lands on the dark end of a photograph (tree lines, shadow).
+   Plain .glass measured 4.63:1 there — passing, but too close to the floor and
+   visually muddy against a brief that asks for bright. */
+.glass-strong {
+  background-color: color-mix(in oklab, white 84%, transparent);
+  backdrop-filter: blur(20px) saturate(1.3);
+  -webkit-backdrop-filter: blur(20px) saturate(1.3);
+  border: 1px solid color-mix(in oklab, white 65%, transparent);
+}
+
+.glass-dark {
+  background-color: color-mix(in oklab, oklch(0.2 0.022 250) 42%, transparent);
+  backdrop-filter: blur(20px) saturate(1.3);
+  -webkit-backdrop-filter: blur(20px) saturate(1.3);
+  border: 1px solid color-mix(in oklab, white 18%, transparent);
+}
+
+/* Fallback: without backdrop-filter, frost would read as a flat wash and
+   text over photography could drop below 4.5:1. Go opaque instead. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass {
+    background-color: color-mix(in oklab, white 92%, transparent);
+  }
+  .glass-strong {
+    background-color: color-mix(in oklab, white 96%, transparent);
+  }
+  .glass-dark {
+    background-color: color-mix(in oklab, oklch(0.2 0.022 250) 88%, transparent);
+  }
+}
+
+/* ---- Buttons --------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  cursor: pointer;
+  /* Named properties only — never `all` */
+  transition: transform 160ms var(--ease-out), background-color 160ms var(--ease-out),
+    color 160ms var(--ease-out), border-color 160ms var(--ease-out);
+  /* 44px minimum tap target */
+  min-height: 44px;
+  padding: 0 1.5rem;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: background-color 160ms linear, color 160ms linear;
+  }
+  .btn:active {
+    transform: none;
+  }
+}
+
+.btn-primary {
+  background-color: var(--color-marine);
+  color: white;
+  border: 1px solid transparent;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-primary:hover {
+    background-color: var(--color-marine-deep);
+  }
+}
+
+.btn-ghost {
+  background-color: color-mix(in oklab, white 70%, transparent);
+  color: var(--color-ink);
+  border: 1px solid var(--color-hairline);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-ghost:hover {
+    background-color: white;
+    border-color: var(--color-faint);
+  }
+}
+
+/* ---- Focus ----------------------------------------------------------- */
+:focus-visible {
+  outline: 2px solid var(--color-marine);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Only suppress the ring for genuine pointer input, never for keyboards */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* The dialog takes programmatic focus on open, which Chrome treats as
+   focus-visible and rings the whole panel. The panel is not an interactive
+   target — its label and aria-modal already announce it — so drop the ring
+   here only. Every control inside keeps its own. */
+[role='dialog']:focus,
+[role='dialog']:focus-visible {
+  outline: none;
+}
+
+/* ---- Card ------------------------------------------------------------ */
+/* Radius caps at 16px. Border OR shadow — never both as decoration. */
+.card {
+  border-radius: 16px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-hairline);
+  overflow: hidden;
+}
+
+.card-raised {
+  border-radius: 16px;
+  background-color: var(--color-surface);
+  box-shadow: 0 2px 8px oklch(0.2 0.022 250 / 0.08);
+  overflow: hidden;
+}
+
+/* ---- Reveal ---------------------------------------------------------- */
+/* Content is visible by default. JS opts in to the hidden state only after
+   confirming motion is allowed, so a headless or no-JS render is never blank. */
+[data-reveal='pending'] {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+[data-reveal='shown'] {
+  opacity: 1;
+  transform: none;
+  transition: opacity 500ms var(--ease-out), transform 500ms var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal='pending'] {
+    opacity: 1;
+    transform: none;
+  }
+  [data-reveal='shown'] {
+    transition: none;
+  }
+}
+
+/* Reveal state must never survive into print. */
+@media print {
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ---- Nav ------------------------------------------------------------- */
+/* `.btn` sets display:inline-flex, which outranks Tailwind's `hidden` in the
+   cascade — the burger leaked onto desktop. Gate it explicitly instead. */
+@media (min-width: 1024px) {
+  .nav-burger {
+    display: none;
+  }
+}
+
+/* On narrow screens the CTA label swallowed the whole bar. The mobile menu
+   carries it instead. Same `.btn` cascade problem, so gate it explicitly. */
+.nav-cta {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .nav-cta {
+    display: inline-flex;
+  }
+}
+
+/* Mirror of .nav-cta: the menu carries the phone number only while the bar
+   doesn't, so the two never both show between 640px and 1024px. */
+.menu-only {
+  display: block;
+}
+
+@media (min-width: 640px) {
+  .menu-only {
+    display: none;
+  }
+}
+
+/* ---- Skeleton shimmer ------------------------------------------------ */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    oklch(0.92 0.006 230) 0%,
+    oklch(0.96 0.004 230) 50%,
+    oklch(0.92 0.006 230) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton {
+    animation: none;
+  }
+}
+
+/* ---- Modal ----------------------------------------------------------- */
+.modal-backdrop {
+  animation: backdrop-in 240ms var(--ease-out);
+}
+
+.modal-panel {
+  animation: panel-in 240ms var(--ease-out);
+}
+
+@keyframes backdrop-in {
+  from {
+    opacity: 0;
+  }
+}
+
+/* Entrances start at 0.96 — never scale(0). Modals stay centre-origin. */
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modal-panel {
+    animation: backdrop-in 240ms linear;
+  }
+}
+
+/* Sheet on mobile rises from its own height regardless of size */
+@keyframes sheet-in {
+  from {
+    transform: translateY(100%);
+  }
+}
+
+@media (max-width: 640px) {
+  .modal-panel {
+    animation: sheet-in 280ms var(--ease-out);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modal-panel {
+      animation: backdrop-in 240ms linear;
+    }
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
